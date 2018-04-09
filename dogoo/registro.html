@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Dogoo</title>
+  </head>
+  <body>
+        <header>
+            <div class="collapse bg-dark" id="navbarHeader">
+                <div class="container">
+                <div class="row">           
+                    <div class="col-sm-4 offset-md-1 py-4">
+                            <h4 class="text-white">Matchea</h4>
+                            <p>Encuentra la pareja perfecta <a href="match.hmtl">aqui</a></p>
+                            <h4 class="text-white">Busca</h4>
+                            <p>Adopta o compra un perrito <a href="buscar.hmtl">aqui</a></p>
+
+                            </div>
+                    <div class="col-sm-2 offset-md-1 py-4">
+                    <h4 class="text-white">Tu cuenta</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="login.html" class="text-white">Iniciar sesion</a></li>
+                        <li><a href="registro.html" class="text-white">Registrarse</a></li>
+                        <li><a href="admCuenta.html" class="text-white">Postular Perro</a></li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="navbar navbar-dark bg-dark box-shadow">
+                <div class="container d-flex justify-content-between">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                    <strong>Dogoo</strong>
+                </a>
+                <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+                        <ul class="navbar-nav">
+                          <li class="nav-item" style="margin:10px 0px 0px 0px;">
+                            <a class="nav-link" href="#">Matchea</a>
+                          </li>
+                          <li class="nav-item" style="margin:10px 0px 0px 120px;">
+                            <a class="nav-link" href="#">Busca</a>
+                          </li>
+                        </ul>
+                      </nav>
+                      
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                </div>
+            </div>
+        </header>
+    
+        <main role="main"> 
+			<form name="formulario"  method="post" action="main.html">
+				<p> Ingrese sus datos</p> <br>
+				<div id="pantalla1">
+				<label>Nombre*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+				<input title="Campo requerido" type="text" name="nombre" id="nombre" maxlength="20" autofocus required/> </p>
+				
+				<label>Apellido*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+				<input title="Campo requerido" type="text" name="apellido" id="apellido" maxlength="20" required/> </p>
+				
+				<label>Email*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</label>
+				<input type="email" name="email" id="email" required/> </p>
+				<label>Contrase&ntilde;a*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+				<input title="Campo requerido" type="password" name="password" id="password" maxlength="9" required/> </p>			
+				
+				<label>Repetir contrase&ntilde;a*:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+				<input title="Campo requerido" type="password" name="password1" id="password1" maxlength="9" required/> </p>
+				<br>
+				   
+				   <label id="cr">*Campos Obligatorios</label></p> <br>
+				   <a href="login.html">Ya estoy registrado</a>
+				   <div id="boton">
+				<input id="boton" type="submit" class="btn" value="Siguiente" onclick="return validarPass()">
+				<input id="boton" type="reset" class="btn" value="Cancelar">
+				</div>
+	
+			</form>
+		</div>
+		</main>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
+        <script src="./libs/services.js/sex/SexService.js"></script>
+        <script src="./libs/services.js/raza/RazaService.js"></script>
+        <script src="./libs/services.js/provincias/ProvinciasService.js"></script>
+        <script src="./libs/services.js/departamentos/DepartamentosService.js"></script>
+        <script src="./libs/services.js/transaccion/TransaccionService.js"></script> 
+        <script src="./libs/services.js/user/registro.js"></script> 
+
+        <script type="text/javascript">
+			var envio = 1;
+			var x = document.getElementById('password');
+			var y = document.getElementById('password1');
+		
+			function validarPass{
+				if (x!=y) {
+					alert(contrasentildea invalida);
+				};
+				if (envio == 1){
+						return true;
+					}else{
+		
+							return false
+						}
+				}
+		</script>
+	</body>
+</html>
