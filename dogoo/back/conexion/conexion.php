@@ -29,5 +29,12 @@ class Conexion{
         }
         return $res;
     }
+
+    function insertar($sql){
+        $resultado = $this->con->query($sql);
+        $res = array();
+        return $res;
+    }
+    
 }
  ?>

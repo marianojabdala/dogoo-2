@@ -1,4 +1,4 @@
-class SexService {
+/*class SexService {
     constructor() {
         this.serviceUrl = "./back/services/sex/getSex.php";
     }
@@ -6,4 +6,4 @@ class SexService {
     getSexs(){
         return $.getJSON( this.serviceUrl)   
     }
-}
+}*/

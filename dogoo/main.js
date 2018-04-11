@@ -3,12 +3,12 @@ $(function() {
     loadMain();
 
     function loadMain(){
-        $sexSelect = $('#sexo');
+        //$sexSelect = $('#sexo');
         $razaSelect = $('#raza');
         $localidadSelect = $('#localidad');
         $departamentoSelect = $('#departamento');
         $transaccionSelect = $('#transaccion');
-        loadSexSelect();
+        //loadSexSelect();
         cargarSelectDeRazas();    
         cargarSelectDeLocalidad();
         cargarSelectDeTransaccion();
@@ -17,15 +17,8 @@ $(function() {
     /* 
     * precargamos el selector de sexos
     * llamando al servicio js que a su vez llama al back end y trae los sexos
-    */
-    function loadSexSelect(){
-        var sexServices = new SexService();
-        sexServices.getSexs().then(function(sexs) {
-          sexs.forEach(function(sexo) {
-            $sexSelect.append($('<option>').val(sexo.id_sexo).text(sexo.sexo));
-          });
-        });
-    }    
+  */
+
 
     function cargarSelectDeRazas(){
         var razaServices = new RazaService();

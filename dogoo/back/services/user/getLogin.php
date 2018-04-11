@@ -15,7 +15,7 @@
     echo "<script languaje= 'javascript'> window.location='main.html'</script>";	
 
 
-    $res1= mysql_query("select * FROM Usuario WHERE email = '".$_POST["email"]."' AND password='".$_POST["password"]."'");
+    $res1= mysql_query("select * FROM usuario WHERE email = '".$_POST["email"]."' AND password='".$_POST["password"]."'");
     $cta= mysql_num_rows($res1);
     	if ($cta > 0)
 	{
