@@ -8,10 +8,12 @@ $(function() {
         $localidadSelect = $('#localidad');
         $departamentoSelect = $('#departamento');
         $transaccionSelect = $('#transaccion');
+        $busquedaSelect = $('#perro');
         //loadSexSelect();
         cargarSelectDeRazas();    
         cargarSelectDeLocalidad();
         cargarSelectDeTransaccion();
+        cargarTablaBuscar();
     }
 
     /* 
@@ -56,4 +58,13 @@ $(function() {
           });
         });
     });
+
+    function cargarTablaBuscar(){
+        var busquedaServices = new BuscadorService();
+        busquedaServices.getBusqueda().then(function(busqueda) {
+            busquedas.forEach(function(busqueda) {
+                $busquedaSelect.append($('<td>').val(busqueda.id_perro).text(busqueda.perro).text(busqueda.descripcion));
+          });
+        });
+    }
 });
